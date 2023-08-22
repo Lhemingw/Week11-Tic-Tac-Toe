@@ -13,7 +13,14 @@ body {
     cursor: pointer;
     position: relative;
   }
-  
+  .SPRITES{
+    .cell.KURT{
+      background-image: url(./James-T.Kurt_cropped_135x135.png);
+    }
+    .cell.Picard{
+      background-image: url(./Jean-Luc_Picard_cropped_135x135.png);
+    }
+  }
   .tile {
     color: currentColor;
     font-size: 2em;
@@ -124,3 +131,8 @@ body {
     content: "O"; 
     opacity: 0.4;
   }
+.background{
+  background-image: url(./Background-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}  

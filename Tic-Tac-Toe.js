@@ -1,10 +1,11 @@
 // Using any of the tools you've worked with so far, create a game of Tic-Tac-Toe.
 //Create a Tic-Tac-Toe game grid using your HTML element of choice.
 //When a cell in the grid is clicked, an X or O should appear in that spot depending on whose turn it is.
-//A heading should say whether it is X's or O's turn and change with each move made.
+//***A heading should say whether it is X's or O's turn and change with each move made.***
 //A button should be available to clear the grid and restart the game.
 //When a player has won, or the board is full and the game results in a draw, 
-//a Bootstrap alert or similar Bootstrap component should appear across the screen announcing the winner.
+//**a Bootstrap alert or similar Bootstrap component should appear across the screen announcing the winner.***
+//Need to add kirt/Jean for X/O
 
 const tiles = document.querySelectorAll(".tile");
 const PLAYER_X = "X";
@@ -13,6 +14,97 @@ let turn = PLAYER_X;
 
 const boardState = Array(tiles.length);
 boardState.fill(null);
+
+function markX (square, sqVal) {
+  console.log(square);
+  if (currentPlayer == "X" && square.text() =="") {
+    square.append(`img src="James-T.Kurt_cropped_135x135.png`);
+   currentPLayerSwitch();
+   board.push(sqVal)
+   square.addClass("xSquares");
+   checkForWinner();
+   $(`#currentPlayerText`).text("Player o's Turn");
+  }else if (currentPlayer ==  "O"&& square.text()==""){
+  console.log(currentPlayer);
+  console.log(square);
+  square.text("O");
+  currentPlayerSwitch();
+  board.push(sqVal);
+  console.log(board);
+  playerOMoves.push(sqVal);
+}
+}
+
+//Board Advatars----I think//
+const cells = document.querySelectorAll(".cell");
+  
+const board = document.getElementById("board");
+  
+const playerXFile = document.getElementById("cell.KURT");
+const playerOFile = document.getElementById("cell.Picard");//I put .cell.Picard and wonder if player-oavatar is needed
+  
+//const playerXAvatarAction = document.getElementById(".cell.KURT-action");
+//const playerOAvatarAction = document.getElementById(".cell.Picard-action");
+  
+const playerXAvatar = document.getElementById("player-x-avatar");
+const playerOAvatar = document.getElementById("player-o-avatar");
+
+const playerXName = document.getElementById("player-x-avatar");
+const playerOName = document.getElementById("player-o-avatar");
+
+
+function onMount(){
+  avatarX =`James-T.Kurt_cropped_135x135.png`;
+  avatarO = `Jean-Luc_Picard_cropped_135x135.png`;
+
+  playerXAvatar.src =avatarx;
+  playerOAvatar.src = avatarO;
+
+  cells.forEach((cell) => cell.addEventListener(`click`, onCell));
+}
+
+function onCell(event){
+  const {id}= event.target;
+  if (gameBoard[id]===``){
+    updateBoard(id);
+  }
+}
+function updateBoard (index) {
+  gameBoard[index]-currentPlayer;
+
+  //cells[index].innerHTML =getPlayerAvatar();
+  //const gameStatus = checkGamesStatus();
+  //currentPlayer =currentPlayer === `X` ? `O`:
+}
+
+function checkGamesStatus(){
+  let winClassName = null;
+    for (let i = 0; i < WINNING_PROBABILITES.length; i++) { 
+      const [a, b, c] =WINNING_PROBABILITES[i];
+
+      if(gameBoard[a]&& gameBoard[a]=== gameBoard[b] && gameBoard[a] ===gameBoard[c]){
+        winClassName = `win-${a}${b}${c}`;
+        break;
+      }
+    }
+    if (winClassName !== null){
+      return true;
+    }
+    if (gameBoard.includes("")){
+      alert(`Draw`);
+    }
+    return false;
+    }
+  
+
+function getPlayerAvatar(){
+  let avatar = avatarO;
+  if (currentPlayer === `X`){
+    avatar = avatarX;
+  }
+  return`<img class="h-14 w-14 md:h-28 md:w-28 rounded-full object-cover player-${currentPlayer.toLocaleLowerCase()}"src="${avatar}"alt-${currentPlayer.toLocaleLowerCase}/>`;
+}
+onMount();
 
 //Elements
 const strike = document.getElementById("strike");

@@ -7,9 +7,16 @@
     <title>Tic-Tac-Toe</title>
     <link href="index.css" rel="stylesheet"/>
 </head>
-<body>
+<body img class= img src="Background-image.png">
+<style>
+background {
+  background-image: url(`./Background-image.png`);
+}
+</style>
+<img class=img src="./James-T.Kurt_cropped_135x135.png"class="h-14 w-14 md:h-28 md:w-28 rounded-full object-cover">
+<img class=img src="./Jean-Luc_Picard_cropped_135x135.png"class="h-14 w-14 md:h-28 md:w-28 rounded-full object-cover">
    <!-- Confetti Animation -->
-  <section class="confetti" id="confetti">
+  <!---<section class="confetti" id="confetti">
     <div class="confetti-piece"></div>
     <div class="confetti-piece"></div>
     <div class="confetti-piece"></div>
@@ -24,7 +31,7 @@
     <div class="confetti-piece"></div>
     <div class="confetti-piece"></div>
     <div class="confetti-piece"></div>
-  </section>
+  </section>--->
 
   <main class="mx-auto" id="canvas">
     <!-- Header -->
@@ -45,7 +52,7 @@
       <div data-index="7" class="tile right-border"></div>
       <div data-index="8" class="tile right-border"></div>
       <div data-index="9" class="tile"></div>
-      <div id="strike" class="strike strike-column-1"></div>
+      <div id="strike" class="strike strike-column-1"></div><!--to get rid of red line takeout strike-column-1-->
     <!--</div>From Adam's video, I am not doing tailwind--> 
  <!--<section class="p-5">
     <div class="flex justify-center relative">
@@ -68,13 +75,13 @@
       <div id="win-line"></div><!--Added from Adam's video-->
     </div>
   </section>
-   <!-- Board Players -->
-   <section class="mb-5 pb-12 flex items-center justify-center">
+  <!-- Board Players -->
+  <section class="mb-5 pb-12 flex items-center justify-center">
     <ul role="list" class="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
       <li>
         <div class="flex items-center gap-x-1 relative">
           <img id="player-x-avatar" class="h-14 w-14 md:h-28 md:w-28 rounded-full object-cover" src="./assets/images/davy-jones.jpg" alt="x" />
-          <img id="player-x-trophy" class="trophy animate-wiggle" src="./assets/images/trophy.png" alt="trophy" />
+          <!--<img id="player-x-trophy" class="trophy animate-wiggle" src="./assets/images/trophy.png" alt="trophy" />-->
 
           <div class="ml-4">
             <h3 id="player-x-name" class="text-base front-semibold leading-7 tracking-tight text-gray-900 animate-bounce">Player X</h3>
@@ -83,8 +90,11 @@
             <button id="player-x-avatar-action" class="ignore mt-[5px] rounded-md border border-gray-300 bg-indigo-600 text-white hover:bg-indigo-700 py-1.5 px-2.5 text-sm font-semibold text-gray-900 shadow-sm" type="button">Change</button>
           </div>
         </div>
+      </li> 
+            <!--<button id=".cell.KURT--action" class="ignore mt-[5px] rounded-md border border-gray-300 bg-indigo-600 text-white hover:bg-indigo-700 py-1.5 px-2.5 text-sm font-semibold text-gray-900 shadow-sm" type="button">Change</button>-->
+          </div>  <!--Stoped her checking-->
+        </div>
       </li>
-      
       <li>
         <div class="flex items-center gap-x-1 relative">
           <img id="player-o-avatar" class="h-14 w-14 md:h-28 md:w-28 rounded-full object-cover" src="./assets/images/jack-sparrow.jpg" alt="o" />
@@ -99,6 +109,7 @@
         </div>
       </li>
     </ul>
+
   </section>
  <!-- Board Actions -->
  <section class="ignore mt-10 flex items-center justify-center space-x-4">
@@ -151,10 +162,10 @@
               <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                 <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Game ended in a draw!</h3>
                 <div class="mt-2">
-                  <p class="text-sm text-gray-500">The game has ended in a draw. Both players have played their best
+                 <!----<p class="text-sm text-gray-500">The game has ended in a draw. Both players have played their best
                     moves but neither has been able to claim victory. Don't worry though, there's always a chance for
                     a rematch. Keep practicing your Tic Tac Toe skills and try again soon.</p>
-                  <p class="text-sm text-gray-500 mt-3">Thanks for playing and we hope you enjoyed the game!</p>
+                  <p class="text-sm text-gray-500 mt-3">Thanks for playing and we hope you enjoyed the game!</p>--->
                 </div>
               </div>
             </div>
@@ -173,9 +184,9 @@
   </section>
 </main>
 <script src="Tic-Tac-Toe.js"></script>
-<script src="./assets/js/confetti.browser.min.js"></script>
+<!--<script src="./assets/js/confetti.browser.min.js"></script>
 <script src="./assets/js/html2canvas.min.js"></script>
-<script src="./assets/js/script.js"></script>
+<script src="./assets/js/script.js"></script>-->
  
 </body>
 </html>
