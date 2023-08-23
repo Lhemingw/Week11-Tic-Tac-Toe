@@ -14,10 +14,10 @@ body {
     position: relative;
   }
   .SPRITES{
-    .cell.KURT{
+    .player-x-avatar{
       background-image: url(./James-T.Kurt_cropped_135x135.png);
     }
-    .cell.Picard{
+    .player-o-avatar{
       background-image: url(./Jean-Luc_Picard_cropped_135x135.png);
     }
   }

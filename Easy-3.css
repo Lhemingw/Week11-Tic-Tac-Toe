@@ -1,0 +1,145 @@
+/*
+   Using CSS Grid to layout our board:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+
+*/
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 300px;
+    margin:  auto; /* centering grid */
+}
+
+/*
+   Using flexbox to center content:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+*/
+.cell {
+    border: 1px solid #443aac;
+    display: flex;
+    align-items: center; /* vertical center - (cross axis) */
+    justify-content: center; /* horizontal center - (main axis) */
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #34053c;
+    border: 1px solid #6a076b;
+    cursor: pointer;
+    font-size: 60px;
+}
+.cell img{
+    max-width: 100%;
+    max-height: 100%;
+   
+}
+.background{
+    background-image: url("./Photos/Background-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  } 
+
+  .tile {
+    color: currentColor;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255,0,0);
+    box-shadow: #34053c;
+    
+  } 
+  /* styles.css */
+
+#title{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(255,0,0);
+    font-family: Indigo, sans-serif;
+    box-shadow: #34053c;  
+  }
+  h1 {
+    color: indigo
+  }
+  #turn {
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Indigo", sans-serif;
+    color: blue;
+    /* Add box shadow here */
+    box-shadow: 0 0 10px rgba(52, 5, 60, 0.7);
+}  
+  /* styles.css */
+
+/* Add a class to cells that are part of the winning combination */
+.winning-cell {
+    position: relative;
+}
+
+/* Add a pseudo-element to create the strike line */
+.winning-cell::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Position at the middle of the cell */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Adjust the line thickness */
+    background-color: red; /* Adjust the line color */
+    transform: translateY(-50%); /* Center the line vertically */
+    z-index: -1; /* Place the line behind the cell content */
+}
+
+  .strike {
+    position: absolute;
+    background-color: darkred;
+  }
+  
+  .strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 15%;
+  }
+  .strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top: 48%;
+  }
+  .strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top: 83%;
+  }
+  .strike-column-1 {
+    height: 100%;
+    width: 4px;
+    left: 15%;
+  }
+  .strike-column-2 {
+    height: 100%;
+    width: 4px;
+    left: 48%;
+  }
+  .strike-column-3 {
+    height: 100%;
+    width: 4px;
+    left: 83%;
+  }
+  .strike-diagonal-1 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+  }
+  .strike-diagonal-2 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+  } 
