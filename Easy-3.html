@@ -7,24 +7,24 @@
     <title>Tic-Tac-Toe</title>
     <link href="Easy-3.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
+</head><!--Connecting stuff at the bottom, and the body class as a background to make the ship-->
 <body class="background"></body>
-  <div class="container mt-5">
-    <h1 id="turn">X's Turn</h1>
+  <div class="container mt-5"><!--a container to hold it in along with margin top of 5-->
+    <h1 id="turn">X's Turn</h1><!--anouncing X's turn, which rolls through all of the turns-->
     <h1 class="tile" id="tile">TIC-TAC-TOE</h1>
-    <h1 class="tile"></div>
-    <div class="flex justify-center relative"></div>
-    <div id="board" class="row"></div>
+    <h1 class="tile"></div><!--A class tile to make the board from the css-->
+    <div class="flex justify-center relative"></div><!--a flex box to make it a box and to make it center relative-->
+    <div id="board" class="row"></div><!--a board and rows-->
     
       <!-- Create the grid cells dynamically using JavaScript -->
     </div>
-    <button id="restart" class="btn btn-primary mt-3">Restart Game</button>
+    <button id="restart" class="btn btn-primary mt-3">Restart Game</button><!--this is the restart with a class button, to restart the game-->
   </div>
 
   
   
 
-<script src ="Easy-3.js"></script>
+<script src ="Easy-3.js"></script><!--Connecting JS at the bottom-->
 <!--<script src="script.js"></script>-->
 </body>
 </html>
@@ -56,10 +56,10 @@
       <li>
         <div class="flex items-center gap-x-1 relative">
           <img id="player-x-avatar" class="h-14 w-14 md:h-28 md:w-28 rounded-full object-cover" src="./Photos/James-T.Kurt_cropped_135x135.png" alt="x" />
-          <img id="player-x-trophy" class="trophy animate-wiggle" src="./assets/images/trophy.png" alt="trophy" />
+          <!--<img id="player-x-trophy" class="trophy animate-wiggle" src="./assets/images/trophy.png" alt="trophy" />-->
 
           <div class="ml-4">
-            <h3 id="player-x-name" class="text-base front-semibold leading-7 tracking-tight text-gray-900 animate-bounce">Player X</h3>
+            <h3 id="player-x-name" class="text-base front-semibold leading-7 tracking-tight text-red-900 animate-bounce">Player X</h3>
             <p class="text-xs text-gray-500">Score: <span id="player-x-score">0</span></p>
 
             <button id="player-x-avatar-action" class="ignore mt-[5px] rounded-md border border-gray-300 bg-indigo-600 text-white hover:bg-indigo-700 py-1.5 px-2.5 text-sm font-semibold text-gray-900 shadow-sm" type="button">Change</button>
@@ -73,10 +73,10 @@
       <li>
         <div class="flex items-center gap-x-1 relative">
           <img id="player-o-avatar" class="h-14 w-14 md:h-28 md:w-28 rounded-full object-cover" src="./Photos/Jean-Luc_Picard_cropped_135x135.png" alt="o" />
-         <img id="player-o-trophy" class="trophy animate-wiggle" src="./assets/images/trophy.png" alt="trophy" />
+         <!--<img id="player-o-trophy" class="trophy animate-wiggle" src="./assets/images/trophy.png" alt="trophy" />-->
 
           <div class="ml-4">
-            <h3 id="player-o-name" class="text-base front-semibold leading-7 tracking-tight text-gray-900">Player O</h3>
+            <h3 id="player-o-name" class="text-base front-semibold leading-7 tracking-tight text-red-900">Player O</h3>
             <p class="text-xs text-gray-500">Score: <span id="player-o-score">0</span></p>
 
             <button id="player-o-avatar-action" class="ignore mt-[5px] rounded-md border border-gray-300 bg-indigo-600 text-white hover:bg-indigo-700 py-1.5 px-2.5 text-sm font-semibold text-gray-900 shadow-sm" type="button">Change</button>

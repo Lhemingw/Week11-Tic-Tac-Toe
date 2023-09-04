@@ -19,20 +19,20 @@
     border: 1px solid #443aac;
     display: flex;
     align-items: center; /* vertical center - (cross axis) */
-    justify-content: center; /* horizontal center - (main axis) */
+    justify-content: center; /* horizontal center - (main axis) I have 100px for width/height.  This is for the making the cells.*/
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 0 1px #34053c;
-    border: 1px solid #6a076b;
+    box-shadow: 0 0 0 1px #34053c;/* This section is the box shadow, that you really can not see, but see enough to know*/
+    border: 1px solid #6a076b;/* This is the border of the game board along with pointer and font size*/
     cursor: pointer;
     font-size: 60px;
 }
 .cell img{
-    max-width: 100%;
+    max-width: 100%;/*  This is the cell for the photo I played with this and got the photo really small*/
     max-height: 100%;
    
 }
-.background{
+.background{/*This is the background for the photos that is in the background, to cover all, no repeat, and 0 margin/padding*/
     background-image: url("./Photos/Background-image.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,11 +40,11 @@
     padding: 0;
   } 
 
-  .tile {
+  .tile {/*This is the tile box for the tile*/
     color: currentColor;
     font-size: 2em;
     display: flex;
-    justify-content: center;
+    justify-content: center;/* This is justify the context center and color and a box shadow*/
     align-items: center;
     color: rgba(255,0,0);
     box-shadow: #34053c;
@@ -53,23 +53,21 @@
   /* styles.css */
 
 #title{
-    text-align: center;
+    text-align: center;/* This is for the title*/
     padding: 20px;
     font-size: 30px;
     font-weight: bold;
     color: rgba(255,0,0);
-    font-family: Indigo, sans-serif;
     box-shadow: #34053c;  
   }
   h1 {
     color: indigo
   }
-  #turn {
+  #turn {/* This is for the turn it changes is blue, size, and box shadow*/  
     text-align: center;
     padding: 10px;
     font-size: 30px;
     font-weight: bold;
-    font-family: "Indigo", sans-serif;
     color: blue;
     /* Add box shadow here */
     box-shadow: 0 0 10px rgba(52, 5, 60, 0.7);
@@ -94,7 +92,7 @@
     z-index: -1; /* Place the line behind the cell content */
 }
 
-  .strike {
+  .strike {  /* This is for the strike down below, I did not have a chance to work on it, afraid of breaking stuff*/
     position: absolute;
     background-color: darkred;
   }
